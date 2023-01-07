@@ -29,7 +29,7 @@ namespace XanaduUniverseApp.Forms
 
         private void Gnoll_Load(object sender, EventArgs e)
         {
-            MediaPlayer.URL = "Assets/Gnoll_main.mp3";
+            MediaPlayer.URL = "Assets/gnoll/Gnoll_main.mp3";
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             timer.Start();
@@ -79,7 +79,7 @@ namespace XanaduUniverseApp.Forms
         private void Speak_btn_Click(object sender, EventArgs e)
         {
             humanoid.Speak();
-            MediaPlayer.URL = "Assets/Gnoll_french.mp3";
+            MediaPlayer.URL = "Assets/gnoll/Gnoll_french.mp3";
             media_panel.Visible = true;
         }
 

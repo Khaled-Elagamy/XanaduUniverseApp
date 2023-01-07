@@ -18,19 +18,19 @@ namespace XanaduUniverseApp
 
         public void Speak()
         {
-            url = "Assets/elves_french.wav";
+            url = "Assets/elves/elves_french.wav";
         }
         public void Sing()
         {
-            url = "Assets/elves_sing.wav";
+            url = "Assets/elves/elves_sing.wav";
         }
         public void Eat()
         {
-            url = "Assets/eating.mp4";
+            url = "Assets/elves/eating.mp4";
         }
         public override void Socialize()
         {
-            url = "Assets/elves_socialize.wav";
+            url = "Assets/elves/elves_socialize.wav";
         }
     }
 }

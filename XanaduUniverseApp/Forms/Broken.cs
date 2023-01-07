@@ -30,7 +30,7 @@ namespace XanaduUniverseApp.Forms
 
         private void Broken_Load(object sender, EventArgs e)
         {
-            MediaPlayer.URL = "Assets/broken_main.wav";
+            MediaPlayer.URL = "Assets/broken/broken_main.wav";
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             timer.Start();

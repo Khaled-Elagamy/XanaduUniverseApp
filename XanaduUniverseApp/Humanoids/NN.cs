@@ -18,7 +18,7 @@ namespace XanaduUniverseApp
         }
         public override void Socialize() 
         {
-            url = "Assets/Gnoll_Socialize.mp3";
+            url = "Assets/gnoll/Gnoll_Socialize.mp3";
         }
     }
 }

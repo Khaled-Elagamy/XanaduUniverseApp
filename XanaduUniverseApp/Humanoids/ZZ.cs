@@ -17,20 +17,20 @@ namespace XanaduUniverseApp
         }
         public void Speak()
         {
-            url = "Assets/broken_french.wav";
+            url = "Assets/broken/broken_french.wav";
         }
         public void Sing()
         {
-            url = "Assets/broken_sing.mp3";
+            url = "Assets/broken/broken_sing.mp3";
 
         }
         public void Dance()
         {
-            url = "Assets/broken_dance.mp4";
+            url = "Assets/broken/broken_dance.mp4";
         }
         public override void Socialize()
         {
-            url = "Assets/broken_socialize.wav";
+            url = "Assets/broken/broken_socialize.wav";
         }
     }
 
