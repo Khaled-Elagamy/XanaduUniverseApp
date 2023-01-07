@@ -164,6 +164,7 @@
     <None Include="Assets\sing.png" />
     <None Include="Assets\dance.png" />
     <None Include="Assets\code.png" />
+    <None Include="Assets\snore.png" />
     <Content Include="play_pause.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

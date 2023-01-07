@@ -14,20 +14,27 @@ namespace XanaduUniverseApp.Forms
 {
     public partial class Draenei : Form
     {
-        static string myName = "Iam Leo from DD species";
         static  string myAncestorName = "NN and ZZ species are my ancestors";
-        DD humanoid = new DD(myName, myAncestorName);
+        DD humanoid = new DD("ava", myAncestorName);
+        private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
         public Draenei()
         {
             InitializeComponent();
+            timer.Interval = 6000;
+            timer.Tick += (sender, e) =>
+            {
+                btns_panel.Visible = true;
+                timer.Dispose();
+            };
         }
         private void Draenei_Load(object sender, EventArgs e)
         {
             
-            MediaPlayer.URL = "Assets/test.mp4";
+            MediaPlayer.URL = "Assets/Dareni_main.mp3";
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
+            timer.Start();  
         }
         private void pause_btn_Click(object sender, EventArgs e)
         {
@@ -44,31 +51,60 @@ namespace XanaduUniverseApp.Forms
         {
             MediaPlayer.settings.volume = volumebar.Value;
             label2.Text = volumebar.Value.ToString() + "%";
-        }
-
-        private void Eat_btn_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("What is Eat?!");
-        }
-
+        }      
         private void Snore_btn_Click(object sender, EventArgs e)
         {
             humanoid.Snore();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
         }
 
         private void Socialize_btn_Click(object sender, EventArgs e)
         {
             humanoid.Socialize();
-            MediaPlayer.URL = "Assets/rick.mp4";
-            
-
-            //MediaPlayer.URL = Properties.Resources.rikc;
-
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+            timer.Interval = 2500;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Sing_btn.Visible = true;
+            timer.Dispose();
+        }
+        private void Speak_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Speak();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
         }
 
+        private void writecode_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.WriteCode();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+        }
+
+        private void Dance_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Dance();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+        }
+
+        private void Sing_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Sing();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+        }
         private void Darenei_close(object sender, FormClosingEventArgs e)
         {
             MediaPlayer.Ctlcontrols.stop();
         }
+
+     
     }
 }

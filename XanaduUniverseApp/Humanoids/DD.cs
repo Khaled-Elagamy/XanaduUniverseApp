@@ -13,7 +13,7 @@ namespace XanaduUniverseApp
         }
         public void Snore() 
         {
-            Console.WriteLine("ZZZZZZZZZZZZZZZZ");
+            url = "Assets/snore.mp3";
         }
         public override void Socialize()
         {

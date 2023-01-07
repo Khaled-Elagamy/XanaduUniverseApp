@@ -34,17 +34,19 @@
             this.mediapanel = new System.Windows.Forms.Panel();
             this.pause_btn = new System.Windows.Forms.PictureBox();
             this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.media_panel = new System.Windows.Forms.TableLayoutPanel();
             this.btns_panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.Eat_btn = new System.Windows.Forms.Button();
-            this.Snore_btn = new System.Windows.Forms.Button();
+            this.Speak_btn = new System.Windows.Forms.Button();
+            this.writecode_btn = new System.Windows.Forms.Button();
+            this.Dance_btn = new System.Windows.Forms.Button();
             this.Socialize_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Sing_btn = new System.Windows.Forms.Button();
+            this.Snore_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
             this.mediapanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.media_panel.SuspendLayout();
             this.btns_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,66 +109,78 @@
             this.MediaPlayer.Size = new System.Drawing.Size(423, 261);
             this.MediaPlayer.TabIndex = 19;
             // 
-            // tableLayoutPanel1
+            // media_panel
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.media_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.mediapanel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.MediaPlayer, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.90476F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.09524F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 326);
-            this.tableLayoutPanel1.TabIndex = 24;
-            this.tableLayoutPanel1.Visible = false;
+            this.media_panel.BackColor = System.Drawing.Color.Transparent;
+            this.media_panel.ColumnCount = 1;
+            this.media_panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.media_panel.Controls.Add(this.mediapanel, 0, 1);
+            this.media_panel.Controls.Add(this.MediaPlayer, 0, 0);
+            this.media_panel.Location = new System.Drawing.Point(12, 12);
+            this.media_panel.Name = "media_panel";
+            this.media_panel.RowCount = 2;
+            this.media_panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.90476F));
+            this.media_panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.09524F));
+            this.media_panel.Size = new System.Drawing.Size(429, 326);
+            this.media_panel.TabIndex = 24;
+            this.media_panel.Visible = false;
             // 
             // btns_panel
             // 
             this.btns_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btns_panel.Controls.Add(this.Eat_btn);
+            this.btns_panel.Controls.Add(this.Speak_btn);
+            this.btns_panel.Controls.Add(this.writecode_btn);
+            this.btns_panel.Controls.Add(this.Dance_btn);
             this.btns_panel.Controls.Add(this.Snore_btn);
             this.btns_panel.Controls.Add(this.Socialize_btn);
-            this.btns_panel.Controls.Add(this.button1);
-            this.btns_panel.Location = new System.Drawing.Point(520, 15);
+            this.btns_panel.Controls.Add(this.Sing_btn);
+            this.btns_panel.Location = new System.Drawing.Point(529, 15);
             this.btns_panel.Name = "btns_panel";
-            this.btns_panel.Size = new System.Drawing.Size(65, 349);
-            this.btns_panel.TabIndex = 27;
+            this.btns_panel.Size = new System.Drawing.Size(140, 223);
+            this.btns_panel.TabIndex = 29;
             this.btns_panel.Visible = false;
             // 
-            // Eat_btn
+            // Speak_btn
             // 
-            this.Eat_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Eat_btn.FlatAppearance.BorderSize = 0;
-            this.Eat_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Eat_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.Eat_btn.Image = global::XanaduUniverseApp.Properties.Resources.Eat;
-            this.Eat_btn.Location = new System.Drawing.Point(3, 3);
-            this.Eat_btn.Name = "Eat_btn";
-            this.Eat_btn.Size = new System.Drawing.Size(59, 58);
-            this.Eat_btn.TabIndex = 7;
-            this.Eat_btn.UseVisualStyleBackColor = true;
-            this.Eat_btn.Click += new System.EventHandler(this.Eat_btn_Click);
+            this.Speak_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Speak_btn.FlatAppearance.BorderSize = 0;
+            this.Speak_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Speak_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.Speak_btn.Image = global::XanaduUniverseApp.Properties.Resources.Speak;
+            this.Speak_btn.Location = new System.Drawing.Point(3, 3);
+            this.Speak_btn.Name = "Speak_btn";
+            this.Speak_btn.Size = new System.Drawing.Size(59, 58);
+            this.Speak_btn.TabIndex = 8;
+            this.Speak_btn.UseVisualStyleBackColor = true;
+            this.Speak_btn.Click += new System.EventHandler(this.Speak_btn_Click);
             // 
-            // Snore_btn
+            // writecode_btn
             // 
-            this.Snore_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Snore_btn.FlatAppearance.BorderSize = 0;
-            this.Snore_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Snore_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.Snore_btn.Image = global::XanaduUniverseApp.Properties.Resources.Speak;
-            this.Snore_btn.Location = new System.Drawing.Point(3, 67);
-            this.Snore_btn.Name = "Snore_btn";
-            this.Snore_btn.Size = new System.Drawing.Size(59, 58);
-            this.Snore_btn.TabIndex = 8;
-            this.Snore_btn.UseVisualStyleBackColor = true;
-            this.Snore_btn.Click += new System.EventHandler(this.Snore_btn_Click);
+            this.writecode_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.writecode_btn.FlatAppearance.BorderSize = 0;
+            this.writecode_btn.Image = global::XanaduUniverseApp.Properties.Resources.code;
+            this.writecode_btn.Location = new System.Drawing.Point(68, 3);
+            this.writecode_btn.Name = "writecode_btn";
+            this.writecode_btn.Size = new System.Drawing.Size(59, 58);
+            this.writecode_btn.TabIndex = 11;
+            this.writecode_btn.UseVisualStyleBackColor = true;
+            this.writecode_btn.Click += new System.EventHandler(this.writecode_btn_Click);
+            // 
+            // Dance_btn
+            // 
+            this.Dance_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Dance_btn.FlatAppearance.BorderSize = 0;
+            this.Dance_btn.Image = global::XanaduUniverseApp.Properties.Resources.dance;
+            this.Dance_btn.Location = new System.Drawing.Point(3, 67);
+            this.Dance_btn.Name = "Dance_btn";
+            this.Dance_btn.Size = new System.Drawing.Size(59, 58);
+            this.Dance_btn.TabIndex = 9;
+            this.Dance_btn.UseVisualStyleBackColor = true;
+            this.Dance_btn.Click += new System.EventHandler(this.Dance_btn_Click);
             // 
             // Socialize_btn
             // 
@@ -180,16 +194,30 @@
             this.Socialize_btn.UseVisualStyleBackColor = true;
             this.Socialize_btn.Click += new System.EventHandler(this.Socialize_btn_Click);
             // 
-            // button1
+            // Sing_btn
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Image = global::XanaduUniverseApp.Properties.Resources.Socialize;
-            this.button1.Location = new System.Drawing.Point(3, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 58);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Sing_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Sing_btn.FlatAppearance.BorderSize = 0;
+            this.Sing_btn.Image = global::XanaduUniverseApp.Properties.Resources.sing;
+            this.Sing_btn.Location = new System.Drawing.Point(68, 131);
+            this.Sing_btn.Name = "Sing_btn";
+            this.Sing_btn.Size = new System.Drawing.Size(59, 58);
+            this.Sing_btn.TabIndex = 10;
+            this.Sing_btn.UseVisualStyleBackColor = true;
+            this.Sing_btn.Visible = false;
+            this.Sing_btn.Click += new System.EventHandler(this.Sing_btn_Click);
+            // 
+            // Snore_btn
+            // 
+            this.Snore_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Snore_btn.FlatAppearance.BorderSize = 0;
+            this.Snore_btn.Image = global::XanaduUniverseApp.Properties.Resources.snore;
+            this.Snore_btn.Location = new System.Drawing.Point(68, 67);
+            this.Snore_btn.Name = "Snore_btn";
+            this.Snore_btn.Size = new System.Drawing.Size(59, 58);
+            this.Snore_btn.TabIndex = 12;
+            this.Snore_btn.UseVisualStyleBackColor = true;
+            this.Snore_btn.Click += new System.EventHandler(this.Snore_btn_Click);
             // 
             // Draenei
             // 
@@ -198,7 +226,7 @@
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btns_panel);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.media_panel);
             this.Name = "Draenei";
             this.Text = "Draenei";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Darenei_close);
@@ -208,7 +236,7 @@
             this.mediapanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.media_panel.ResumeLayout(false);
             this.btns_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -221,11 +249,13 @@
         private System.Windows.Forms.PictureBox pause_btn;
         private AxWMPLib.AxWindowsMediaPlayer MediaPlayer;
         private System.Windows.Forms.Panel mediapanel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel media_panel;
         private System.Windows.Forms.FlowLayoutPanel btns_panel;
-        private System.Windows.Forms.Button Eat_btn;
-        private System.Windows.Forms.Button Snore_btn;
+        private System.Windows.Forms.Button Speak_btn;
+        private System.Windows.Forms.Button writecode_btn;
+        private System.Windows.Forms.Button Dance_btn;
         private System.Windows.Forms.Button Socialize_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Sing_btn;
+        private System.Windows.Forms.Button Snore_btn;
     }
 }

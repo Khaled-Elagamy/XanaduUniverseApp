@@ -33,7 +33,7 @@ namespace XanaduUniverseApp.Forms
         }
         private void Elves_Load(object sender, EventArgs e)
         {
-            MediaPlayer.URL = "Assets/elves-main3.mp3";
+            MediaPlayer.URL = "Assets/elves-main.mp3";
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             timer.Start();

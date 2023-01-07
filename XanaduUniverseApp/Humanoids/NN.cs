@@ -14,7 +14,7 @@ namespace XanaduUniverseApp
         }
         public void WriteCode() 
         {
-            Console.WriteLine("Get away its compiling");
+            url = "Assets/code.mp4";
         }
         public override void Socialize() 
         {

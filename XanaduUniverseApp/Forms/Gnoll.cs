@@ -55,6 +55,10 @@ namespace XanaduUniverseApp.Forms
         private void writecode_btn_Click(object sender, EventArgs e)
         {
             humanoid.WriteCode();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+
+            
         }
         private void Socialize_btn_Click(object sender, EventArgs e)
         {
@@ -64,6 +68,7 @@ namespace XanaduUniverseApp.Forms
             timer.Interval = 2500;
             timer.Tick += Timer_Tick;
             timer.Start();
+
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
