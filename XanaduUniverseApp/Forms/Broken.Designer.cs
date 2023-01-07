@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Broken));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.mediapanel = new System.Windows.Forms.Panel();
+            this.media_panel = new System.Windows.Forms.TableLayoutPanel();
+            this.media_ctrls_panel = new System.Windows.Forms.Panel();
             this.volumebar = new System.Windows.Forms.TrackBar();
-            this.pause_btn = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.btns_panel = new System.Windows.Forms.FlowLayoutPanel();
@@ -40,42 +39,43 @@
             this.Socialize_btn = new System.Windows.Forms.Button();
             this.Dance_btn = new System.Windows.Forms.Button();
             this.Sing_btn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.mediapanel.SuspendLayout();
+            this.pause_btn = new System.Windows.Forms.PictureBox();
+            this.media_panel.SuspendLayout();
+            this.media_ctrls_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.btns_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).BeginInit();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // media_panel
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.media_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.mediapanel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.MediaPlayer, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.90476F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.09524F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 326);
-            this.tableLayoutPanel1.TabIndex = 25;
-            this.tableLayoutPanel1.Visible = false;
+            this.media_panel.BackColor = System.Drawing.Color.Transparent;
+            this.media_panel.ColumnCount = 1;
+            this.media_panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.media_panel.Controls.Add(this.media_ctrls_panel, 0, 1);
+            this.media_panel.Controls.Add(this.MediaPlayer, 0, 0);
+            this.media_panel.Location = new System.Drawing.Point(12, 12);
+            this.media_panel.Name = "media_panel";
+            this.media_panel.RowCount = 2;
+            this.media_panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.90476F));
+            this.media_panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.09524F));
+            this.media_panel.Size = new System.Drawing.Size(429, 326);
+            this.media_panel.TabIndex = 25;
+            this.media_panel.Visible = false;
             // 
-            // mediapanel
+            // media_ctrls_panel
             // 
-            this.mediapanel.Controls.Add(this.volumebar);
-            this.mediapanel.Controls.Add(this.pause_btn);
-            this.mediapanel.Controls.Add(this.label2);
-            this.mediapanel.Location = new System.Drawing.Point(3, 270);
-            this.mediapanel.Name = "mediapanel";
-            this.mediapanel.Size = new System.Drawing.Size(214, 50);
-            this.mediapanel.TabIndex = 23;
+            this.media_ctrls_panel.Controls.Add(this.volumebar);
+            this.media_ctrls_panel.Controls.Add(this.pause_btn);
+            this.media_ctrls_panel.Controls.Add(this.label2);
+            this.media_ctrls_panel.Location = new System.Drawing.Point(3, 270);
+            this.media_ctrls_panel.Name = "media_ctrls_panel";
+            this.media_ctrls_panel.Size = new System.Drawing.Size(214, 50);
+            this.media_ctrls_panel.TabIndex = 23;
             // 
             // volumebar
             // 
@@ -91,18 +91,6 @@
             this.volumebar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.volumebar.Value = 50;
             this.volumebar.Scroll += new System.EventHandler(this.volumebar_Scroll);
-            // 
-            // pause_btn
-            // 
-            this.pause_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pause_btn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pause_btn.Image = global::XanaduUniverseApp.Properties.Resources.play_pause;
-            this.pause_btn.Location = new System.Drawing.Point(0, 0);
-            this.pause_btn.Name = "pause_btn";
-            this.pause_btn.Size = new System.Drawing.Size(49, 50);
-            this.pause_btn.TabIndex = 20;
-            this.pause_btn.TabStop = false;
-            this.pause_btn.Click += new System.EventHandler(this.pause_btn_Click);
             // 
             // label2
             // 
@@ -134,7 +122,7 @@
             this.btns_panel.Controls.Add(this.Socialize_btn);
             this.btns_panel.Controls.Add(this.Dance_btn);
             this.btns_panel.Controls.Add(this.Sing_btn);
-            this.btns_panel.Location = new System.Drawing.Point(555, 49);
+            this.btns_panel.Location = new System.Drawing.Point(520, 15);
             this.btns_panel.Name = "btns_panel";
             this.btns_panel.Size = new System.Drawing.Size(65, 289);
             this.btns_panel.TabIndex = 27;
@@ -192,6 +180,18 @@
             this.Sing_btn.Visible = false;
             this.Sing_btn.Click += new System.EventHandler(this.Sing_Click);
             // 
+            // pause_btn
+            // 
+            this.pause_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pause_btn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pause_btn.Image = global::XanaduUniverseApp.Properties.Resources.play_pause;
+            this.pause_btn.Location = new System.Drawing.Point(0, 0);
+            this.pause_btn.Name = "pause_btn";
+            this.pause_btn.Size = new System.Drawing.Size(49, 50);
+            this.pause_btn.TabIndex = 20;
+            this.pause_btn.TabStop = false;
+            this.pause_btn.Click += new System.EventHandler(this.pause_btn_Click);
+            // 
             // Broken
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,24 +199,24 @@
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btns_panel);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.media_panel);
             this.Name = "Broken";
             this.Text = "Broken";
             this.Load += new System.EventHandler(this.Broken_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.mediapanel.ResumeLayout(false);
-            this.mediapanel.PerformLayout();
+            this.media_panel.ResumeLayout(false);
+            this.media_ctrls_panel.ResumeLayout(false);
+            this.media_ctrls_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();
             this.btns_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel mediapanel;
+        private System.Windows.Forms.TableLayoutPanel media_panel;
+        private System.Windows.Forms.Panel media_ctrls_panel;
         private System.Windows.Forms.TrackBar volumebar;
         private System.Windows.Forms.PictureBox pause_btn;
         private System.Windows.Forms.Label label2;

@@ -20,7 +20,7 @@ namespace XanaduUniverseApp.Forms
         public Broken()
         {
             InitializeComponent();
-            timer.Interval = 6500;
+            timer.Interval = 4500;
             timer.Tick += (sender, e) =>
             {
                 btns_panel.Visible = true;
@@ -58,14 +58,14 @@ namespace XanaduUniverseApp.Forms
         {
             humanoid.Speak();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
         }
 
         private void Socialize_btn_Click(object sender, EventArgs e)
         {
             humanoid.Socialize();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
             timer.Interval = 2500;
             timer.Tick += Timer_Tick;
             timer.Start();
@@ -80,13 +80,13 @@ namespace XanaduUniverseApp.Forms
         {
             humanoid.Dance();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
         }
         private void Sing_Click(object sender, EventArgs e)
         {
             humanoid.Sing();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
         }
     }
 }

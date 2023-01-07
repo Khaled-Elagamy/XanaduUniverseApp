@@ -33,7 +33,7 @@ namespace XanaduUniverseApp.Forms
         }
         private void Elves_Load(object sender, EventArgs e)
         {
-            MediaPlayer.URL = "Assets/elves-main.wav";
+            MediaPlayer.URL = "Assets/elves-main3.mp3";
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             timer.Start();
@@ -61,7 +61,7 @@ namespace XanaduUniverseApp.Forms
         {
             humanoid.Eat();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
 
 
         }
@@ -69,7 +69,7 @@ namespace XanaduUniverseApp.Forms
         {
             humanoid.Speak();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
 
         }
 
@@ -77,13 +77,13 @@ namespace XanaduUniverseApp.Forms
         {
             humanoid.Socialize();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
         }
         private void sing_btn_Click(object sender, EventArgs e)
         {
             humanoid.Sing();
             MediaPlayer.URL = humanoid.url;
-            tableLayoutPanel1.Visible = true;
+            media_panel.Visible = true;
         }
         private void Elves_clsoe(object sender, FormClosingEventArgs e)
         {

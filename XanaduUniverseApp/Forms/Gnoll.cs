@@ -12,19 +12,27 @@ namespace XanaduUniverseApp.Forms
 {
     public partial class Gnoll : Form
     {
-        static string myName = "Iam Mia from NN species";
         static string myAncestorName = "ZZ species are my ancestors";
-        NN humanoid = new NN(myName, myAncestorName);
+        NN humanoid = new NN("Mia", myAncestorName);
+        private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+
         public Gnoll()
         {
             InitializeComponent();
+            timer.Interval = 4500;
+            timer.Tick += (sender, e) =>
+            {
+                btns_panel.Visible = true;
+                timer.Dispose();
+            };
         }
 
         private void Gnoll_Load(object sender, EventArgs e)
         {
-            MediaPlayer.URL = "Assets/test.mp4";
+            MediaPlayer.URL = "Assets/Gnoll_main.mp3";
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
+            timer.Start();
         }
 
         private void pause_btn_Click(object sender, EventArgs e)
@@ -48,13 +56,40 @@ namespace XanaduUniverseApp.Forms
         {
             humanoid.WriteCode();
         }
-
-
         private void Socialize_btn_Click(object sender, EventArgs e)
         {
             humanoid.Socialize();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+            timer.Interval = 2500;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Sing_btn.Visible = true;
+            timer.Dispose();
         }
 
+        private void Speak_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Speak();
+            MediaPlayer.URL = "Assets/Gnoll_french.mp3";
+            media_panel.Visible = true;
+        }
 
+        private void Dance_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Dance();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+        }
+
+        private void Sing_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Sing();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+        }
     }
 }

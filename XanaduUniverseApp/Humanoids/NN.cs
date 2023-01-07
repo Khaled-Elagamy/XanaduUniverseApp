@@ -12,14 +12,13 @@ namespace XanaduUniverseApp
         public NN(string myName, string myAncestorName) : base(myName, myAncestorName)
         {
         }
-       
         public void WriteCode() 
         {
             Console.WriteLine("Get away its compiling");
         }
         public override void Socialize() 
-        { 
-            Sing();
+        {
+            url = "Assets/Gnoll_Socialize.mp3";
         }
     }
 }
