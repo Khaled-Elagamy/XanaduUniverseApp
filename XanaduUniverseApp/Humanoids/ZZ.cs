@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using XanaduUniverseApp;
@@ -9,28 +10,27 @@ namespace XanaduUniverseApp
 {
     class ZZ : Humanoid, ISpeakFrench, ICanDance
     {
+        public string url;
+
         public ZZ(string myName, string myAncestorName) : base(myName, myAncestorName)
         {
         }
         public void Speak()
         {
-            Console.WriteLine("We cant speak French");
-
+            url = "Assets/broken_french.wav";
         }
         public void Sing()
         {
-            Console.WriteLine("hohoho");
+            url = "Assets/broken_sing.mp3";
 
         }
         public void Dance()
         {
-            Console.WriteLine("We are dancing");
-
+            url = "Assets/broken_dance.mp4";
         }
         public override void Socialize()
         {
-            Dance();
-            Sing();
+            url = "Assets/broken_socialize.wav";
         }
     }
 

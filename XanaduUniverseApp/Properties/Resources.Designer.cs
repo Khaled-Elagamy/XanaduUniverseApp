@@ -73,6 +73,16 @@ namespace XanaduUniverseApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dance {
+            get {
+                object obj = ResourceManager.GetObject("dance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eat {
             get {
                 object obj = ResourceManager.GetObject("Eat", resourceCulture);
@@ -116,6 +126,16 @@ namespace XanaduUniverseApp.Properties {
         internal static System.Drawing.Bitmap return_btn {
             get {
                 object obj = ResourceManager.GetObject("return_btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sing {
+            get {
+                object obj = ResourceManager.GetObject("sing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

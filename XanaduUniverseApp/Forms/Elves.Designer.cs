@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Elves));
-            this.Speak_btn = new System.Windows.Forms.Button();
-            this.Eat_btn = new System.Windows.Forms.Button();
-            this.Socialize_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.mediapanel = new System.Windows.Forms.Panel();
             this.volumebar = new System.Windows.Forms.TrackBar();
@@ -39,6 +36,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.btns_panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.Eat_btn = new System.Windows.Forms.Button();
+            this.Speak_btn = new System.Windows.Forms.Button();
+            this.sing_btn = new System.Windows.Forms.Button();
+            this.Socialize_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.mediapanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
@@ -46,46 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.btns_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Speak_btn
-            // 
-            this.Speak_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Speak_btn.FlatAppearance.BorderSize = 0;
-            this.Speak_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Speak_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.Speak_btn.Image = global::XanaduUniverseApp.Properties.Resources.Speak;
-            this.Speak_btn.Location = new System.Drawing.Point(3, 3);
-            this.Speak_btn.Name = "Speak_btn";
-            this.Speak_btn.Size = new System.Drawing.Size(59, 58);
-            this.Speak_btn.TabIndex = 8;
-            this.Speak_btn.UseVisualStyleBackColor = true;
-            this.Speak_btn.Click += new System.EventHandler(this.Speak_btn_Click);
-            // 
-            // Eat_btn
-            // 
-            this.Eat_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Eat_btn.FlatAppearance.BorderSize = 0;
-            this.Eat_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Eat_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.Eat_btn.Image = global::XanaduUniverseApp.Properties.Resources.Eat;
-            this.Eat_btn.Location = new System.Drawing.Point(3, 131);
-            this.Eat_btn.Name = "Eat_btn";
-            this.Eat_btn.Size = new System.Drawing.Size(59, 58);
-            this.Eat_btn.TabIndex = 7;
-            this.Eat_btn.UseVisualStyleBackColor = true;
-            this.Eat_btn.Click += new System.EventHandler(this.Eat_btn_Click);
-            // 
-            // Socialize_btn
-            // 
-            this.Socialize_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Socialize_btn.FlatAppearance.BorderSize = 0;
-            this.Socialize_btn.Image = global::XanaduUniverseApp.Properties.Resources.Socialize;
-            this.Socialize_btn.Location = new System.Drawing.Point(3, 67);
-            this.Socialize_btn.Name = "Socialize_btn";
-            this.Socialize_btn.Size = new System.Drawing.Size(59, 58);
-            this.Socialize_btn.TabIndex = 3;
-            this.Socialize_btn.UseVisualStyleBackColor = true;
-            this.Socialize_btn.Click += new System.EventHandler(this.Socialize_btn_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -170,14 +131,67 @@
             // 
             this.btns_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btns_panel.Controls.Add(this.Speak_btn);
-            this.btns_panel.Controls.Add(this.Socialize_btn);
             this.btns_panel.Controls.Add(this.Eat_btn);
+            this.btns_panel.Controls.Add(this.Speak_btn);
+            this.btns_panel.Controls.Add(this.sing_btn);
+            this.btns_panel.Controls.Add(this.Socialize_btn);
             this.btns_panel.Location = new System.Drawing.Point(520, 15);
             this.btns_panel.Name = "btns_panel";
-            this.btns_panel.Size = new System.Drawing.Size(65, 250);
+            this.btns_panel.Size = new System.Drawing.Size(65, 303);
             this.btns_panel.TabIndex = 26;
             this.btns_panel.Visible = false;
+            // 
+            // Eat_btn
+            // 
+            this.Eat_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Eat_btn.FlatAppearance.BorderSize = 0;
+            this.Eat_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Eat_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.Eat_btn.Image = global::XanaduUniverseApp.Properties.Resources.Eat;
+            this.Eat_btn.Location = new System.Drawing.Point(3, 3);
+            this.Eat_btn.Name = "Eat_btn";
+            this.Eat_btn.Size = new System.Drawing.Size(59, 58);
+            this.Eat_btn.TabIndex = 7;
+            this.Eat_btn.UseVisualStyleBackColor = true;
+            this.Eat_btn.Click += new System.EventHandler(this.Eat_btn_Click);
+            // 
+            // Speak_btn
+            // 
+            this.Speak_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Speak_btn.FlatAppearance.BorderSize = 0;
+            this.Speak_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Speak_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.Speak_btn.Image = global::XanaduUniverseApp.Properties.Resources.Speak;
+            this.Speak_btn.Location = new System.Drawing.Point(3, 67);
+            this.Speak_btn.Name = "Speak_btn";
+            this.Speak_btn.Size = new System.Drawing.Size(59, 58);
+            this.Speak_btn.TabIndex = 8;
+            this.Speak_btn.UseVisualStyleBackColor = true;
+            this.Speak_btn.Click += new System.EventHandler(this.Speak_btn_Click);
+            // 
+            // sing_btn
+            // 
+            this.sing_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.sing_btn.FlatAppearance.BorderSize = 0;
+            this.sing_btn.Image = global::XanaduUniverseApp.Properties.Resources.sing;
+            this.sing_btn.Location = new System.Drawing.Point(3, 131);
+            this.sing_btn.Name = "sing_btn";
+            this.sing_btn.Size = new System.Drawing.Size(59, 58);
+            this.sing_btn.TabIndex = 9;
+            this.sing_btn.UseVisualStyleBackColor = true;
+            this.sing_btn.Click += new System.EventHandler(this.sing_btn_Click);
+            // 
+            // Socialize_btn
+            // 
+            this.Socialize_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Socialize_btn.FlatAppearance.BorderSize = 0;
+            this.Socialize_btn.Image = global::XanaduUniverseApp.Properties.Resources.Socialize;
+            this.Socialize_btn.Location = new System.Drawing.Point(3, 195);
+            this.Socialize_btn.Name = "Socialize_btn";
+            this.Socialize_btn.Size = new System.Drawing.Size(59, 58);
+            this.Socialize_btn.TabIndex = 3;
+            this.Socialize_btn.UseVisualStyleBackColor = true;
+            this.Socialize_btn.Click += new System.EventHandler(this.Socialize_btn_Click);
             // 
             // Elves
             // 
@@ -214,5 +228,6 @@
         private System.Windows.Forms.PictureBox pause_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel btns_panel;
+        private System.Windows.Forms.Button sing_btn;
     }
 }

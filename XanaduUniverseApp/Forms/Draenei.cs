@@ -60,14 +60,15 @@ namespace XanaduUniverseApp.Forms
         {
             humanoid.Socialize();
             MediaPlayer.URL = "Assets/rick.mp4";
+            
 
             //MediaPlayer.URL = Properties.Resources.rikc;
 
         }
 
-        private void MediaPlayer_Enter(object sender, EventArgs e)
+        private void Darenei_close(object sender, FormClosingEventArgs e)
         {
-
+            MediaPlayer.Ctlcontrols.stop();
         }
     }
 }

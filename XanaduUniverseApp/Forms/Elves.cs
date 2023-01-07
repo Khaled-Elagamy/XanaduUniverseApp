@@ -14,9 +14,8 @@ namespace XanaduUniverseApp.Forms
 {
     public partial class Elves : Form
     {
-        static string myName = "Iam ava from YY species";
         static string myAncestorName = "I dont know my ancestores";
-        YY humanoid = new YY(myName, myAncestorName);
+        YY humanoid = new YY("Leo", myAncestorName);
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
 
@@ -37,7 +36,6 @@ namespace XanaduUniverseApp.Forms
             MediaPlayer.URL = "Assets/elves-main.wav";
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
-           // Media_panel.Visible = false;
             timer.Start();
         }
 
@@ -62,7 +60,7 @@ namespace XanaduUniverseApp.Forms
         private void Eat_btn_Click(object sender, EventArgs e)
         {
             humanoid.Eat();
-            MediaPlayer.URL = "Assets/test.mp4";
+            MediaPlayer.URL = humanoid.url;
             tableLayoutPanel1.Visible = true;
 
 
@@ -78,11 +76,21 @@ namespace XanaduUniverseApp.Forms
         private void Socialize_btn_Click(object sender, EventArgs e)
         {
             humanoid.Socialize();
+            MediaPlayer.URL = humanoid.url;
+            tableLayoutPanel1.Visible = true;
+        }
+        private void sing_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Sing();
+            MediaPlayer.URL = humanoid.url;
+            tableLayoutPanel1.Visible = true;
         }
         private void Elves_clsoe(object sender, FormClosingEventArgs e)
         {
             MediaPlayer.Ctlcontrols.stop();
+
         }
+
     }
 
 }

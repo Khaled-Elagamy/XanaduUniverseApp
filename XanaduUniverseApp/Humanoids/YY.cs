@@ -18,21 +18,19 @@ namespace XanaduUniverseApp
 
         public void Speak()
         {
-
-            url = "Assets/rick.mp4";
-            Console.WriteLine("You wanna haer some french ...Bonjour à tous nous aimons l'humain");
+            url = "Assets/elves_french.wav";
         }
         public void Sing()
         {
-            Console.WriteLine("OH sorry we can't sing");
+            url = "Assets/elves_sing.wav";
         }
         public void Eat()
         {
-            Console.WriteLine("I can eat,,yummy");
+            url = "Assets/eating.mp4";
         }
         public override void Socialize()
         {
-            Console.WriteLine("OH sorry we dont't socialize");
+            url = "Assets/elves_socialize.wav";
         }
     }
 }
