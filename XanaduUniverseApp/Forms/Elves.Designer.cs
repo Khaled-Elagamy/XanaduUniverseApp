@@ -112,7 +112,7 @@
             this.mediapanel.Controls.Add(this.volumebar);
             this.mediapanel.Controls.Add(this.pause_btn);
             this.mediapanel.Controls.Add(this.label1);
-            this.mediapanel.Location = new System.Drawing.Point(3, 253);
+            this.mediapanel.Location = new System.Drawing.Point(3, 270);
             this.mediapanel.Name = "mediapanel";
             this.mediapanel.Size = new System.Drawing.Size(214, 50);
             this.mediapanel.TabIndex = 23;
@@ -163,7 +163,7 @@
             this.MediaPlayer.Location = new System.Drawing.Point(3, 3);
             this.MediaPlayer.Name = "MediaPlayer";
             this.MediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("MediaPlayer.OcxState")));
-            this.MediaPlayer.Size = new System.Drawing.Size(423, 244);
+            this.MediaPlayer.Size = new System.Drawing.Size(423, 261);
             this.MediaPlayer.TabIndex = 19;
             // 
             // btns_panel
