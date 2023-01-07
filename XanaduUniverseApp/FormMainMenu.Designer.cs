@@ -182,7 +182,7 @@
             this.btnElves.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnElves.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnElves.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnElves.Location = new System.Drawing.Point(470, 0);
+            this.btnElves.Location = new System.Drawing.Point(450, 0);
             this.btnElves.Name = "btnElves";
             this.btnElves.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnElves.Size = new System.Drawing.Size(131, 52);
@@ -200,7 +200,7 @@
             this.btnBroken.FlatAppearance.BorderSize = 0;
             this.btnBroken.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBroken.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBroken.Location = new System.Drawing.Point(290, 0);
+            this.btnBroken.Location = new System.Drawing.Point(300, 0);
             this.btnBroken.Name = "btnBroken";
             this.btnBroken.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnBroken.Size = new System.Drawing.Size(131, 52);
@@ -214,11 +214,10 @@
             // 
             // btnGnoll
             // 
-            this.btnGnoll.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnGnoll.FlatAppearance.BorderSize = 0;
             this.btnGnoll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGnoll.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnGnoll.Location = new System.Drawing.Point(131, 0);
+            this.btnGnoll.Location = new System.Drawing.Point(150, 0);
             this.btnGnoll.Name = "btnGnoll";
             this.btnGnoll.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnGnoll.Size = new System.Drawing.Size(131, 52);
@@ -232,7 +231,6 @@
             // 
             // btnDraenei
             // 
-            this.btnDraenei.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDraenei.FlatAppearance.BorderSize = 0;
             this.btnDraenei.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDraenei.ForeColor = System.Drawing.Color.Gainsboro;
