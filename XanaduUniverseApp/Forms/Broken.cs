@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -79,7 +80,7 @@ namespace XanaduUniverseApp.Forms
         private void Dance_Click(object sender, EventArgs e)
         {
             humanoid.Dance();
-            MediaPlayer.URL = humanoid.url;
+            MediaPlayer.URL = "Assets/broken/broken_dance.mp4";
             media_panel.Visible = true;
         }
         private void Sing_Click(object sender, EventArgs e)
