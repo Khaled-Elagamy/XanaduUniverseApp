@@ -57,7 +57,6 @@ namespace XanaduUniverseApp.Forms
             else
             {
                 MediaPlayer.Ctlcontrols.play();
-                Play_checker.Dispose();
             }
         }
         private void volumebar_Scroll(object sender, EventArgs e)
@@ -91,7 +90,7 @@ namespace XanaduUniverseApp.Forms
         private void Dance_Click(object sender, EventArgs e)
         {
             humanoid.Dance();
-            MediaPlayer.URL = "Assets/broken/broken_dance.mp4";
+            MediaPlayer.URL = humanoid.url;
             media_panel.Visible = true;
         }
         private void Sing_Click(object sender, EventArgs e)
@@ -107,13 +106,14 @@ namespace XanaduUniverseApp.Forms
             {
                 MediaPlayer.Ctlcontrols.pause();
                 btns_panel.Visible = true;
-                timer.Dispose();
+                Play_checker.Dispose();
             }
         }
         //Close the form
         private void Broken_Close(object sender, FormClosingEventArgs e)
         {
             Play_checker.Dispose();
+            timer.Dispose();
         }
         #endregion
     }

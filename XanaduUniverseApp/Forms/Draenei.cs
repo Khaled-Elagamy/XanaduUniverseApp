@@ -57,7 +57,6 @@ namespace XanaduUniverseApp.Forms
             else
             {
                 MediaPlayer.Ctlcontrols.play();
-                Play_checker.Dispose();
             }
         }
         //MediaPlayer volume bar
@@ -85,7 +84,6 @@ namespace XanaduUniverseApp.Forms
             MediaPlayer.URL = humanoid.url;
             media_panel.Visible = true;
         }
-
         private void Dance_btn_Click(object sender, EventArgs e)
         {
             humanoid.Dance();
@@ -120,7 +118,7 @@ namespace XanaduUniverseApp.Forms
             {
                 MediaPlayer.Ctlcontrols.pause();
                 btns_panel.Visible = true;
-                timer.Dispose();
+                Play_checker.Dispose();
             }
         }
         //Close the form
@@ -128,10 +126,8 @@ namespace XanaduUniverseApp.Forms
         {
             MediaPlayer.Ctlcontrols.stop();
             Play_checker.Dispose();
+            timer.Dispose();
         }
-
-
         #endregion
-
     }
 }

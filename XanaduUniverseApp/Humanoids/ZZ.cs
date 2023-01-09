@@ -24,9 +24,9 @@ namespace XanaduUniverseApp
             url = "Assets/broken/broken_sing.mp3";
 
         }
-        public void Dance()
+        public virtual void Dance()
         {
-            url = "Assets/broken/broken_dance.mp4";
+            url = "Assets/dance.mp4";
         }
         public override void Socialize()
         {

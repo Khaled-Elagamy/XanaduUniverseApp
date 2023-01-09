@@ -16,6 +16,10 @@ namespace XanaduUniverseApp
         {
             url = "Assets/code.mp4";
         }
+        public override void Dance()
+        {
+            url = "Assets/broken/broken_dance.mp4";
+        }
         public override void Socialize() 
         {
             url = "Assets/gnoll/Gnoll_Socialize.mp3";

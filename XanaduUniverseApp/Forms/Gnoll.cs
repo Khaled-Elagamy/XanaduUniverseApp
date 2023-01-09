@@ -55,7 +55,6 @@ namespace XanaduUniverseApp.Forms
             else
             {
                 MediaPlayer.Ctlcontrols.play();
-                Play_checker.Dispose();
             }
         }
         //MediaPlayer volume bar
@@ -112,7 +111,7 @@ namespace XanaduUniverseApp.Forms
             {
                 MediaPlayer.Ctlcontrols.pause();
                 btns_panel.Visible = true;
-                timer.Dispose();
+                Play_checker.Dispose();
             }
         }
         //Close the form
@@ -120,6 +119,7 @@ namespace XanaduUniverseApp.Forms
         {
             MediaPlayer.Ctlcontrols.stop();
             Play_checker.Dispose();
+            timer.Dispose();
         }
         #endregion
     }
