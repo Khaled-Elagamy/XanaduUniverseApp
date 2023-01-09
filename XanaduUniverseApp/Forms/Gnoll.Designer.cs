@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gnoll));
             this.media_panel = new System.Windows.Forms.TableLayoutPanel();
             this.media_ctrls_panel = new System.Windows.Forms.Panel();
@@ -41,6 +42,7 @@
             this.Dance_btn = new System.Windows.Forms.Button();
             this.Socialize_btn = new System.Windows.Forms.Button();
             this.Sing_btn = new System.Windows.Forms.Button();
+            this.Play_checker = new System.Windows.Forms.Timer(this.components);
             this.media_panel.SuspendLayout();
             this.media_ctrls_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
@@ -140,7 +142,6 @@
             this.btns_panel.Name = "btns_panel";
             this.btns_panel.Size = new System.Drawing.Size(65, 348);
             this.btns_panel.TabIndex = 28;
-            this.btns_panel.Visible = false;
             // 
             // Speak_btn
             // 
@@ -205,6 +206,10 @@
             this.Sing_btn.Visible = false;
             this.Sing_btn.Click += new System.EventHandler(this.Sing_btn_Click);
             // 
+            // Play_checker
+            // 
+            this.Play_checker.Tick += new System.EventHandler(this.Play_checker_Tick);
+            // 
             // Gnoll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,7 +220,7 @@
             this.Controls.Add(this.media_panel);
             this.Name = "Gnoll";
             this.Text = "Gnoll";
-            this.Load += new System.EventHandler(this.Gnoll_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Gnoll_Close);
             this.media_panel.ResumeLayout(false);
             this.media_ctrls_panel.ResumeLayout(false);
             this.media_ctrls_panel.PerformLayout();
@@ -240,5 +245,6 @@
         private System.Windows.Forms.Button Dance_btn;
         private System.Windows.Forms.Button Sing_btn;
         private System.Windows.Forms.Button writecode_btn;
+        private System.Windows.Forms.Timer Play_checker;
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.Mute_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bntMinimize = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelTitleBar.Controls.Add(this.Mute_btn);
             this.panelTitleBar.Controls.Add(this.panelLogo);
             this.panelTitleBar.Controls.Add(this.bntMinimize);
             this.panelTitleBar.Controls.Add(this.btnMaximize);
@@ -63,6 +65,21 @@
             this.panelTitleBar.Size = new System.Drawing.Size(882, 75);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // Mute_btn
+            // 
+            this.Mute_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mute_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.Mute_btn.FlatAppearance.BorderSize = 0;
+            this.Mute_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mute_btn.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mute_btn.Image = global::XanaduUniverseApp.Properties.Resources.mute_gif;
+            this.Mute_btn.Location = new System.Drawing.Point(633, 22);
+            this.Mute_btn.Name = "Mute_btn";
+            this.Mute_btn.Size = new System.Drawing.Size(56, 33);
+            this.Mute_btn.TabIndex = 3;
+            this.Mute_btn.UseVisualStyleBackColor = false;
+            this.Mute_btn.Click += new System.EventHandler(this.mute_btn_Click);
             // 
             // panelLogo
             // 
@@ -258,6 +275,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "FormMainMenu";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.panelLogo.ResumeLayout(false);
@@ -271,7 +289,6 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelDesktopPanel;
-        private System.Windows.Forms.Button btncloseform;
         private System.Windows.Forms.Button bntMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
@@ -282,6 +299,8 @@
         private System.Windows.Forms.Button btnBroken;
         private System.Windows.Forms.Button btnGnoll;
         private System.Windows.Forms.Button btnDraenei;
+        private System.Windows.Forms.Button btncloseform;
+        private System.Windows.Forms.Button Mute_btn;
     }
 }
 

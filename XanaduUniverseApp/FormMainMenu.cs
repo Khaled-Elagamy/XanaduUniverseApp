@@ -1,4 +1,5 @@
 ﻿using AxWMPLib;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,13 +21,14 @@ namespace XanaduUniverseApp
     public partial class FormMainMenu : Form
     {
         //Fields
-
         private Button currentButton;
         private Form activeForm;
         private static SoundPlayer player = new SoundPlayer();
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
-        //Constructor
+        //Save the mute button value in registry
+        private static RegistryKey key = Registry.CurrentUser.CreateSubKey("MyApplication");
+        public bool isMuted = Convert.ToBoolean(key.GetValue("IsMuted", false));
 
         public FormMainMenu()
         {
@@ -35,23 +37,25 @@ namespace XanaduUniverseApp
             btncloseform.Visible = false;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            mainassistant();
-
-            foreach (Control initialBtn in panelmenu.Controls)
+            //Mute button 
+            if (!isMuted)
             {
-                if ((string)initialBtn.Tag == "initial")
-                {
-                    initialBtn.Visible = false;
-                }
+                mainassistant();
+            }
+            else
+            {
+                Mute_btn.Image = Resources.mute;
             }
         }
+        //To make the MainWindow drag moveable 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         //Methods
 
+        #region Assistant voice
+        //Main assistant voice
         private void mainassistant()
         {
             Thread.Sleep(1000);
@@ -68,19 +72,16 @@ namespace XanaduUniverseApp
                     {
                         initialBtn.Visible = true;
                         panelmenu.Visible = true;
-                        // if (initialBtn.Visible == true)
-                        if ( initialBtn.BackColor == Color.FromArgb(51, 51, 76))
+                        if (initialBtn.BackColor == Color.FromArgb(51, 51, 76))
                         {
-                            //initialBtn.Visible = false;
                             initialBtn.BackColor = Color.FromArgb(63, 63, 90);
                         }
                         else
                         {
-                            //initialBtn.Visible = true;
                             counter++;
                             initialBtn.BackColor = Color.FromArgb(51, 51, 76);
                         }
-                        timer.Interval =500;
+                        timer.Interval = 500;
                     }
                 }
                 if (counter > 12)
@@ -90,6 +91,9 @@ namespace XanaduUniverseApp
             };
             timer.Start();
         }
+        #endregion
+        #region Highlight buttons
+        //Highlight the button of the active form
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -105,12 +109,11 @@ namespace XanaduUniverseApp
                 }
             }
         }
-
+        //Reset the highlights of the buttons of forms
         private void DisableButton()
         {
             foreach (Control initialBtn in panelmenu.Controls)
             {
-                //if (previousBtn.GetType() == typeof(Button))
                 if ((string)initialBtn.Tag == "initial")
                 {
                     initialBtn.BackColor = Color.FromArgb(51, 51, 76);
@@ -119,6 +122,9 @@ namespace XanaduUniverseApp
                 }
             }
         }
+        #endregion
+        #region OpenForm
+        //Open the form
         private void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -137,25 +143,29 @@ namespace XanaduUniverseApp
             labelTitle.Text = childForm.Text;
             player.Stop();
         }
+        #endregion
+        #region Forms-Buttons
         private void btnElves_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Elves(), sender);
-            if (timer.Enabled == true) { DisableButton(); }
-            // player.SoundLocation = "Assets/elves-main.wav";
-            //player.Play();
+            OpenChildForm(new Forms.Elves(this), sender);
+
+           // if (timer.Enabled == true) { DisableButton(); }
         }
         private void btnDraenei_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Draenei(), sender);
+            OpenChildForm(new Forms.Draenei(this), sender);
         }
         private void btnBroken_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Broken(), sender);
+            OpenChildForm(new Forms.Broken(this), sender);
         }
         private void btnGnoll_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Gnoll(), sender);
+            OpenChildForm(new Forms.Gnoll(this), sender);
         }
+        #endregion
+
+        #region Events
         //Drag moveable
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
@@ -178,15 +188,16 @@ namespace XanaduUniverseApp
             currentButton = null;
             btncloseform.Visible = false;
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            player.SoundLocation = "Assets/assisstantleaving.wav";
+            if (!isMuted)
+            {
+                player.SoundLocation = "Assets/assisstantleaving.wav";
 
-            player.PlaySync();
+                player.PlaySync();
+            }
         }
-
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -194,12 +205,33 @@ namespace XanaduUniverseApp
             else
                 this.WindowState = FormWindowState.Normal;
         }
-
         private void bntMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-
+        private void mute_btn_Click(object sender, EventArgs e)
+        {
+            isMuted = !isMuted;
+            if (isMuted)
+            {
+                Mute_btn.Image = Resources.mute;
+                if (player.IsLoadCompleted == true)
+                {
+                    player.Stop();
+                    player.Dispose();
+                    timer.Dispose();
+                    panelmenu.Visible = true;
+                }
+            }
+            else
+            {
+                Mute_btn.Image = Resources.mute_gif;
+            }
+        }
+        private void close(object sender, FormClosedEventArgs e)
+        {
+            key.SetValue("IsMuted", isMuted);
+        }
+        #endregion
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Elves));
             this.media_panel = new System.Windows.Forms.TableLayoutPanel();
             this.media_ctrls_panel = new System.Windows.Forms.Panel();
@@ -40,6 +41,7 @@
             this.Speak_btn = new System.Windows.Forms.Button();
             this.sing_btn = new System.Windows.Forms.Button();
             this.Socialize_btn = new System.Windows.Forms.Button();
+            this.Play_checker = new System.Windows.Forms.Timer(this.components);
             this.media_panel.SuspendLayout();
             this.media_ctrls_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
@@ -139,7 +141,6 @@
             this.btns_panel.Name = "btns_panel";
             this.btns_panel.Size = new System.Drawing.Size(65, 303);
             this.btns_panel.TabIndex = 26;
-            this.btns_panel.Visible = false;
             // 
             // Eat_btn
             // 
@@ -193,6 +194,10 @@
             this.Socialize_btn.UseVisualStyleBackColor = true;
             this.Socialize_btn.Click += new System.EventHandler(this.Socialize_btn_Click);
             // 
+            // Play_checker
+            // 
+            this.Play_checker.Tick += new System.EventHandler(this.Play_checker_Tick);
+            // 
             // Elves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +209,6 @@
             this.Name = "Elves";
             this.Text = "Elves";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Elves_clsoe);
-            this.Load += new System.EventHandler(this.Elves_Load);
             this.media_panel.ResumeLayout(false);
             this.media_ctrls_panel.ResumeLayout(false);
             this.media_ctrls_panel.PerformLayout();
@@ -222,12 +226,13 @@
         private System.Windows.Forms.Button Eat_btn;
         private System.Windows.Forms.Button Speak_btn;
         private System.Windows.Forms.TableLayoutPanel media_panel;
-        private AxWMPLib.AxWindowsMediaPlayer MediaPlayer;
         private System.Windows.Forms.Panel media_ctrls_panel;
         private System.Windows.Forms.TrackBar volumebar;
         private System.Windows.Forms.PictureBox pause_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel btns_panel;
         private System.Windows.Forms.Button sing_btn;
+        private AxWMPLib.AxWindowsMediaPlayer MediaPlayer;
+        private System.Windows.Forms.Timer Play_checker;
     }
 }

@@ -15,50 +15,80 @@ namespace XanaduUniverseApp.Forms
         static string myAncestorName = "ZZ species are my ancestors";
         NN humanoid = new NN("Mia", myAncestorName);
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        private FormMainMenu MainForm;
 
-        public Gnoll()
+        public Gnoll(FormMainMenu mainForm)
         {
             InitializeComponent();
-            timer.Interval = 4500;
-            timer.Tick += (sender, e) =>
-            {
-                btns_panel.Visible = true;
-                timer.Dispose();
-            };
-        }
-
-        private void Gnoll_Load(object sender, EventArgs e)
-        {
-            MediaPlayer.URL = "Assets/gnoll/Gnoll_main.mp3";
+            //Get the main form 
+            MainForm = mainForm;
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
-            timer.Start();
+            Mainassistant();
         }
-
+        #region Main assistant voice
+        private void Mainassistant()
+        {
+            if (!MainForm.isMuted)
+            {
+                btns_panel.Visible = false;
+                timer.Interval = 4500;
+                timer.Tick += (sender, e) =>
+                {
+                    btns_panel.Visible = true;
+                    timer.Dispose();
+                };
+                MediaPlayer.URL = "Assets/gnoll/Gnoll_main.mp3";
+                timer.Start();
+                Play_checker.Start();
+            }
+        }
+        #endregion
+        #region Events
+        //MediaPlayer pause button
         private void pause_btn_Click(object sender, EventArgs e)
         {
             if (MediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
                 MediaPlayer.Ctlcontrols.pause();
-
             }
             else
             {
                 MediaPlayer.Ctlcontrols.play();
+                Play_checker.Dispose();
             }
         }
+        //MediaPlayer volume bar
         private void volumebar_Scroll(object sender, EventArgs e)
         {
             MediaPlayer.settings.volume = volumebar.Value;
             label2.Text = volumebar.Value.ToString() + "%";
         }
+
+        //Humanoid abilites
         private void writecode_btn_Click(object sender, EventArgs e)
         {
             humanoid.WriteCode();
             MediaPlayer.URL = humanoid.url;
             media_panel.Visible = true;
-
-            
+        }
+        private void Speak_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Speak();
+            MediaPlayer.URL = "Assets/gnoll/Gnoll_french.mp3";
+            media_panel.Visible = true;
+        }
+        private void Dance_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Dance();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
+        }
+        private void Sing_btn_Click(object sender, EventArgs e)
+        {
+            humanoid.Sing();
+            MediaPlayer.URL = humanoid.url;
+            media_panel.Visible = true;
         }
         private void Socialize_btn_Click(object sender, EventArgs e)
         {
@@ -68,33 +98,29 @@ namespace XanaduUniverseApp.Forms
             timer.Interval = 2500;
             timer.Tick += Timer_Tick;
             timer.Start();
-
         }
+        //Socialize show btn
         private void Timer_Tick(object sender, EventArgs e)
         {
             Sing_btn.Visible = true;
             timer.Dispose();
         }
-
-        private void Speak_btn_Click(object sender, EventArgs e)
+        //Check the mute button 
+        private void Play_checker_Tick(object sender, EventArgs e)
         {
-            humanoid.Speak();
-            MediaPlayer.URL = "Assets/gnoll/Gnoll_french.mp3";
-            media_panel.Visible = true;
+            if (MainForm.isMuted)
+            {
+                MediaPlayer.Ctlcontrols.pause();
+                btns_panel.Visible = true;
+                timer.Dispose();
+            }
         }
-
-        private void Dance_btn_Click(object sender, EventArgs e)
+        //Close the form
+        private void Gnoll_Close(object sender, FormClosingEventArgs e)
         {
-            humanoid.Dance();
-            MediaPlayer.URL = humanoid.url;
-            media_panel.Visible = true;
+            MediaPlayer.Ctlcontrols.stop();
+            Play_checker.Dispose();
         }
-
-        private void Sing_btn_Click(object sender, EventArgs e)
-        {
-            humanoid.Sing();
-            MediaPlayer.URL = humanoid.url;
-            media_panel.Visible = true;
-        }
+        #endregion
     }
 }

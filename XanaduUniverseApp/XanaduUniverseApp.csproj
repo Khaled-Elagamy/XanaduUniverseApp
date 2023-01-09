@@ -165,6 +165,9 @@
     <None Include="Assets\dance.png" />
     <None Include="Assets\code.png" />
     <None Include="Assets\snore.png" />
+    <None Include="Assets\mute-gif2.gif" />
+    <None Include="Assets\mute-gif.gif" />
+    <None Include="Assets\mute.png" />
     <Content Include="play_pause.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

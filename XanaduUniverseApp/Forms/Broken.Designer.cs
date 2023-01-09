@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Broken));
             this.media_panel = new System.Windows.Forms.TableLayoutPanel();
             this.media_ctrls_panel = new System.Windows.Forms.Panel();
             this.volumebar = new System.Windows.Forms.TrackBar();
+            this.pause_btn = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.btns_panel = new System.Windows.Forms.FlowLayoutPanel();
@@ -39,13 +41,13 @@
             this.Socialize_btn = new System.Windows.Forms.Button();
             this.Dance_btn = new System.Windows.Forms.Button();
             this.Sing_btn = new System.Windows.Forms.Button();
-            this.pause_btn = new System.Windows.Forms.PictureBox();
+            this.Play_checker = new System.Windows.Forms.Timer(this.components);
             this.media_panel.SuspendLayout();
             this.media_ctrls_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.btns_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // media_panel
@@ -92,6 +94,18 @@
             this.volumebar.Value = 50;
             this.volumebar.Scroll += new System.EventHandler(this.volumebar_Scroll);
             // 
+            // pause_btn
+            // 
+            this.pause_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pause_btn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pause_btn.Image = global::XanaduUniverseApp.Properties.Resources.play_pause;
+            this.pause_btn.Location = new System.Drawing.Point(0, 0);
+            this.pause_btn.Name = "pause_btn";
+            this.pause_btn.Size = new System.Drawing.Size(49, 50);
+            this.pause_btn.TabIndex = 20;
+            this.pause_btn.TabStop = false;
+            this.pause_btn.Click += new System.EventHandler(this.pause_btn_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -126,7 +140,6 @@
             this.btns_panel.Name = "btns_panel";
             this.btns_panel.Size = new System.Drawing.Size(65, 289);
             this.btns_panel.TabIndex = 27;
-            this.btns_panel.Visible = false;
             // 
             // Speak_btn
             // 
@@ -180,17 +193,9 @@
             this.Sing_btn.Visible = false;
             this.Sing_btn.Click += new System.EventHandler(this.Sing_Click);
             // 
-            // pause_btn
+            // Play_checker
             // 
-            this.pause_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pause_btn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pause_btn.Image = global::XanaduUniverseApp.Properties.Resources.play_pause;
-            this.pause_btn.Location = new System.Drawing.Point(0, 0);
-            this.pause_btn.Name = "pause_btn";
-            this.pause_btn.Size = new System.Drawing.Size(49, 50);
-            this.pause_btn.TabIndex = 20;
-            this.pause_btn.TabStop = false;
-            this.pause_btn.Click += new System.EventHandler(this.pause_btn_Click);
+            this.Play_checker.Tick += new System.EventHandler(this.Play_checker_Tick);
             // 
             // Broken
             // 
@@ -202,14 +207,14 @@
             this.Controls.Add(this.media_panel);
             this.Name = "Broken";
             this.Text = "Broken";
-            this.Load += new System.EventHandler(this.Broken_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Broken_Close);
             this.media_panel.ResumeLayout(false);
             this.media_ctrls_panel.ResumeLayout(false);
             this.media_ctrls_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();
             this.btns_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +231,6 @@
         private System.Windows.Forms.Button Socialize_btn;
         private System.Windows.Forms.Button Dance_btn;
         private System.Windows.Forms.Button Sing_btn;
+        private System.Windows.Forms.Timer Play_checker;
     }
 }

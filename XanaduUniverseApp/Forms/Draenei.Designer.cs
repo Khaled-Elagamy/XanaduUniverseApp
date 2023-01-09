@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Draenei));
             this.label2 = new System.Windows.Forms.Label();
             this.volumebar = new System.Windows.Forms.TrackBar();
@@ -39,9 +40,10 @@
             this.Speak_btn = new System.Windows.Forms.Button();
             this.writecode_btn = new System.Windows.Forms.Button();
             this.Dance_btn = new System.Windows.Forms.Button();
+            this.Snore_btn = new System.Windows.Forms.Button();
             this.Socialize_btn = new System.Windows.Forms.Button();
             this.Sing_btn = new System.Windows.Forms.Button();
-            this.Snore_btn = new System.Windows.Forms.Button();
+            this.Play_checker = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
             this.mediapanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).BeginInit();
@@ -142,7 +144,6 @@
             this.btns_panel.Name = "btns_panel";
             this.btns_panel.Size = new System.Drawing.Size(140, 223);
             this.btns_panel.TabIndex = 29;
-            this.btns_panel.Visible = false;
             // 
             // Speak_btn
             // 
@@ -182,6 +183,18 @@
             this.Dance_btn.UseVisualStyleBackColor = true;
             this.Dance_btn.Click += new System.EventHandler(this.Dance_btn_Click);
             // 
+            // Snore_btn
+            // 
+            this.Snore_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Snore_btn.FlatAppearance.BorderSize = 0;
+            this.Snore_btn.Image = global::XanaduUniverseApp.Properties.Resources.snore;
+            this.Snore_btn.Location = new System.Drawing.Point(68, 67);
+            this.Snore_btn.Name = "Snore_btn";
+            this.Snore_btn.Size = new System.Drawing.Size(59, 58);
+            this.Snore_btn.TabIndex = 12;
+            this.Snore_btn.UseVisualStyleBackColor = true;
+            this.Snore_btn.Click += new System.EventHandler(this.Snore_btn_Click);
+            // 
             // Socialize_btn
             // 
             this.Socialize_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -207,17 +220,9 @@
             this.Sing_btn.Visible = false;
             this.Sing_btn.Click += new System.EventHandler(this.Sing_btn_Click);
             // 
-            // Snore_btn
+            // Play_checker
             // 
-            this.Snore_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Snore_btn.FlatAppearance.BorderSize = 0;
-            this.Snore_btn.Image = global::XanaduUniverseApp.Properties.Resources.snore;
-            this.Snore_btn.Location = new System.Drawing.Point(68, 67);
-            this.Snore_btn.Name = "Snore_btn";
-            this.Snore_btn.Size = new System.Drawing.Size(59, 58);
-            this.Snore_btn.TabIndex = 12;
-            this.Snore_btn.UseVisualStyleBackColor = true;
-            this.Snore_btn.Click += new System.EventHandler(this.Snore_btn_Click);
+            this.Play_checker.Tick += new System.EventHandler(this.Play_checker_Tick);
             // 
             // Draenei
             // 
@@ -230,7 +235,6 @@
             this.Name = "Draenei";
             this.Text = "Draenei";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Darenei_close);
-            this.Load += new System.EventHandler(this.Draenei_Load);
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).EndInit();
             this.mediapanel.ResumeLayout(false);
             this.mediapanel.PerformLayout();
@@ -257,5 +261,6 @@
         private System.Windows.Forms.Button Socialize_btn;
         private System.Windows.Forms.Button Sing_btn;
         private System.Windows.Forms.Button Snore_btn;
+        private System.Windows.Forms.Timer Play_checker;
     }
 }
