@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +45,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Humanoids\DD.cs" />
@@ -103,6 +105,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,6 +171,14 @@
     <None Include="Assets\mute-gif2.gif" />
     <None Include="Assets\mute-gif.gif" />
     <None Include="Assets\mute.png" />
+    <None Include="Assets\Elves-pic.png" />
+    <None Include="Assets\Elves-pic 50.png" />
+    <None Include="Assets\Broken-pic.png" />
+    <None Include="Assets\Draenei-pic.png" />
+    <None Include="Assets\Gnoll-pic.png" />
+    <None Include="Assets\Humanoid-group.png" />
+    <None Include="Assets\Humanoid-group %281%29.png" />
+    <None Include="Assets\Assist-pic.png" />
     <Content Include="play_pause.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace XanaduUniverseApp.Forms
 {
     public partial class Elves : Form
     {
-        static string myAncestorName = "I dont know my ancestores";
+        static string myAncestorName = "I dont know my ancestors";
         YY humanoid = new YY("Leo", myAncestorName);
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private FormMainMenu MainForm;
@@ -27,6 +28,7 @@ namespace XanaduUniverseApp.Forms
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             Mainassistant();
+            About_label.Text = $"Name: Leo\nSpecies: YY\nAncestor: {myAncestorName}";
         }
         #region Main assistant voice
         private void Mainassistant()
@@ -45,6 +47,8 @@ namespace XanaduUniverseApp.Forms
                 Play_checker.Start();
             }
         }
+
+
         #endregion
         #region Events
         //MediaPlayer pause button
@@ -57,7 +61,6 @@ namespace XanaduUniverseApp.Forms
             else
             {
                 MediaPlayer.Ctlcontrols.play();
-                Play_checker.Dispose();
             }
         }
         //MediaPlayer volume bar
@@ -98,7 +101,7 @@ namespace XanaduUniverseApp.Forms
             {
                 MediaPlayer.Ctlcontrols.pause();
                 btns_panel.Visible = true;
-                timer.Dispose();
+                Play_checker.Dispose();
             }
         }
         //Close the form
@@ -106,10 +109,10 @@ namespace XanaduUniverseApp.Forms
         {
             MediaPlayer.Ctlcontrols.stop();
             Play_checker.Dispose();
+            timer.Dispose();
         }
         #endregion
 
-      
     }
 
 }

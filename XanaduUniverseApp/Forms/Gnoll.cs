@@ -25,6 +25,9 @@ namespace XanaduUniverseApp.Forms
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             Mainassistant();
+
+            About_label.Text = $"Name: Mia\nSpecies: NN\nAncestor: {myAncestorName}";
+
         }
         #region Main assistant voice
         private void Mainassistant()
@@ -63,7 +66,6 @@ namespace XanaduUniverseApp.Forms
             MediaPlayer.settings.volume = volumebar.Value;
             label2.Text = volumebar.Value.ToString() + "%";
         }
-
         //Humanoid abilites
         private void writecode_btn_Click(object sender, EventArgs e)
         {
@@ -121,6 +123,9 @@ namespace XanaduUniverseApp.Forms
             Play_checker.Dispose();
             timer.Dispose();
         }
+
         #endregion
+
+      
     }
 }

@@ -12,6 +12,7 @@ namespace XanaduUniverseApp
         public NN(string myName, string myAncestorName) : base(myName, myAncestorName)
         {
         }
+
         public void WriteCode() 
         {
             url = "Assets/code.mp4";

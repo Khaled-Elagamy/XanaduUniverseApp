@@ -27,6 +27,7 @@ namespace XanaduUniverseApp.Forms
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             Mainassistant();
+            About_label.Text = $"Name: Ethan\nSpecies: ZZ\nAncestor: {myAncestorName}";
         }
         #region Main assistant voice
         private void Mainassistant()

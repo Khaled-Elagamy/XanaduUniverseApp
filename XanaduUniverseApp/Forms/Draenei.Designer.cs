@@ -44,12 +44,15 @@
             this.Socialize_btn = new System.Windows.Forms.Button();
             this.Sing_btn = new System.Windows.Forms.Button();
             this.Play_checker = new System.Windows.Forms.Timer(this.components);
+            this.About_label = new System.Windows.Forms.Label();
+            this.humanoid_pic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.volumebar)).BeginInit();
             this.mediapanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pause_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.media_panel.SuspendLayout();
             this.btns_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.humanoid_pic)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -224,14 +227,38 @@
             // 
             this.Play_checker.Tick += new System.EventHandler(this.Play_checker_Tick);
             // 
+            // About_label
+            // 
+            this.About_label.AutoSize = true;
+            this.About_label.BackColor = System.Drawing.SystemColors.InfoText;
+            this.About_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.About_label.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.About_label.ForeColor = System.Drawing.Color.White;
+            this.About_label.Location = new System.Drawing.Point(12, 245);
+            this.About_label.MaximumSize = new System.Drawing.Size(700, 0);
+            this.About_label.Name = "About_label";
+            this.About_label.Size = new System.Drawing.Size(0, 20);
+            this.About_label.TabIndex = 31;
+            // 
+            // humanoid_pic
+            // 
+            this.humanoid_pic.Image = global::XanaduUniverseApp.Properties.Resources.Draenei_pic;
+            this.humanoid_pic.Location = new System.Drawing.Point(12, 12);
+            this.humanoid_pic.Name = "humanoid_pic";
+            this.humanoid_pic.Size = new System.Drawing.Size(230, 230);
+            this.humanoid_pic.TabIndex = 32;
+            this.humanoid_pic.TabStop = false;
+            // 
             // Draenei
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btns_panel);
             this.Controls.Add(this.media_panel);
+            this.Controls.Add(this.About_label);
+            this.Controls.Add(this.btns_panel);
+            this.Controls.Add(this.humanoid_pic);
             this.Name = "Draenei";
             this.Text = "Draenei";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Darenei_close);
@@ -242,7 +269,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();
             this.media_panel.ResumeLayout(false);
             this.btns_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.humanoid_pic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -262,5 +291,7 @@
         private System.Windows.Forms.Button Sing_btn;
         private System.Windows.Forms.Button Snore_btn;
         private System.Windows.Forms.Timer Play_checker;
+        private System.Windows.Forms.Label About_label;
+        private System.Windows.Forms.PictureBox humanoid_pic;
     }
 }

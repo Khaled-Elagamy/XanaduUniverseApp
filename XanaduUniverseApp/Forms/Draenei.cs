@@ -15,7 +15,7 @@ namespace XanaduUniverseApp.Forms
     public partial class Draenei : Form
     {
         static string myAncestorName = "NN and ZZ species are my ancestors";
-        DD humanoid = new DD("ava", myAncestorName);
+        DD humanoid = new DD("Ava", myAncestorName);
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private FormMainMenu MainForm;
 
@@ -27,6 +27,9 @@ namespace XanaduUniverseApp.Forms
             MediaPlayer.uiMode = "none";
             MediaPlayer.settings.volume = volumebar.Value;
             Mainassistant();
+
+            About_label.Text = $"Name: Ava\nSpecies: DD\nAncestor: {myAncestorName}";
+
         }
         #region Main assistant voice
         private void Mainassistant()

@@ -11,6 +11,7 @@ namespace XanaduUniverseApp
         public DD(string myName, string myAncestorName) : base(myName, myAncestorName)
         {
         }
+
         public void Snore() 
         {
             url = "Assets/snore.mp3";

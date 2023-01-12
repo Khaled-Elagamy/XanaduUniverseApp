@@ -63,15 +63,15 @@ namespace XanaduUniverseApp
             player.Play();
             timer.Interval = 8000;
             var counter = 0;
+            panelDesktopPanel.BackgroundImage = Properties.Resources.Assist_pic;
             panelmenu.Visible = false;
             timer.Tick += (sender, e) =>
             {
+                panelmenu.Visible = true;
                 foreach (Control initialBtn in panelmenu.Controls)
                 {
                     if ((string)initialBtn.Tag == "initial")
                     {
-                        initialBtn.Visible = true;
-                        panelmenu.Visible = true;
                         if (initialBtn.BackColor == Color.FromArgb(51, 51, 76))
                         {
                             initialBtn.BackColor = Color.FromArgb(63, 63, 90);
@@ -86,6 +86,7 @@ namespace XanaduUniverseApp
                 }
                 if (counter > 12)
                 {
+                    panelDesktopPanel.BackgroundImage = Properties.Resources.Humanoid_group;
                     timer.Dispose();
                 }
             };
@@ -221,6 +222,7 @@ namespace XanaduUniverseApp
                     player.Dispose();
                     timer.Dispose();
                     panelmenu.Visible = true;
+                    panelDesktopPanel.BackgroundImage = Properties.Resources.Humanoid_group;
                 }
             }
             else

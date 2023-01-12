@@ -30,8 +30,8 @@ namespace XanaduUniverseApp
     }
     abstract class Humanoid
     {
-       public string Name;
-       public string Ancestor;
+       private string Name;
+       private string Ancestor;
         public Humanoid(string myName, string myAncestorName)
         {
             this.Name = myName;

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="XanaduUniverseApp.Forms.Broken" Collapsed="true">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERgQkAAASACAJBAKQGIAEACAEAAAAACgAAAAoEAQAA=</HashCode>
+      <FileName>Forms\Broken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XanaduUniverseApp.Forms.Draenei" Collapsed="true">
+    <Position X="10.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggRgQkBCASACAZBAaQKIAAACAEAAAAASgAAAAoAAQAA=</HashCode>
+      <FileName>Forms\Draenei.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XanaduUniverseApp.Forms.Elves" Collapsed="true">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERgRsAAASACABAAKQCIAAACAEAAAABKgAhAAoCBQAA=</HashCode>
+      <FileName>Forms\Elves.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XanaduUniverseApp.Forms.Gnoll" Collapsed="true">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gkRgQkAAASACAJBAKQKIAAACAEAAAAASgAAAApAAQAA=</HashCode>
+      <FileName>Forms\Gnoll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XanaduUniverseApp.DD" Collapsed="true">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Humanoids\DD.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XanaduUniverseApp.NN" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Humanoids\NN.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XanaduUniverseApp.YY" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAIAAAAAAAAAAAAAAIKAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Humanoids\YY.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XanaduUniverseApp.ZZ" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAIIKAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Humanoids\ZZ.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XanaduUniverseApp.Humanoid" Collapsed="true">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="XanaduUniverseApp.ISpeakFrench" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XanaduUniverseApp.ICanEat" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XanaduUniverseApp.ICanDance" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XanaduUniverseApp.ISnore" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XanaduUniverseApp.ICodeCSharp" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

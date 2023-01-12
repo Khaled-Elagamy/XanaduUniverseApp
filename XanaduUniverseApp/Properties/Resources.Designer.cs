@@ -63,6 +63,26 @@ namespace XanaduUniverseApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Assist_pic {
+            get {
+                object obj = ResourceManager.GetObject("Assist-pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Broken_pic {
+            get {
+                object obj = ResourceManager.GetObject("Broken-pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_btn {
             get {
                 object obj = ResourceManager.GetObject("close_btn", resourceCulture);
@@ -93,9 +113,49 @@ namespace XanaduUniverseApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Draenei_pic {
+            get {
+                object obj = ResourceManager.GetObject("Draenei-pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eat {
             get {
                 object obj = ResourceManager.GetObject("Eat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Elves_pic {
+            get {
+                object obj = ResourceManager.GetObject("Elves-pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gnoll_pic {
+            get {
+                object obj = ResourceManager.GetObject("Gnoll-pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Humanoid_group {
+            get {
+                object obj = ResourceManager.GetObject("Humanoid-group", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

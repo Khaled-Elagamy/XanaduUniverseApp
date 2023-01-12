@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.Mute_btn = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.bntMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btncloseform = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.panelmenu = new System.Windows.Forms.Panel();
             this.btnElves = new System.Windows.Forms.Button();
             this.btnBroken = new System.Windows.Forms.Button();
             this.btnGnoll = new System.Windows.Forms.Button();
             this.btnDraenei = new System.Windows.Forms.Button();
+            this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.Mute_btn = new System.Windows.Forms.Button();
+            this.bntMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btncloseform = new System.Windows.Forms.Button();
             this.panelTitleBar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelmenu.SuspendLayout();
@@ -66,21 +66,6 @@
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
-            // Mute_btn
-            // 
-            this.Mute_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Mute_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.Mute_btn.FlatAppearance.BorderSize = 0;
-            this.Mute_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mute_btn.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mute_btn.Image = global::XanaduUniverseApp.Properties.Resources.mute_gif;
-            this.Mute_btn.Location = new System.Drawing.Point(633, 22);
-            this.Mute_btn.Name = "Mute_btn";
-            this.Mute_btn.Size = new System.Drawing.Size(56, 33);
-            this.Mute_btn.TabIndex = 3;
-            this.Mute_btn.UseVisualStyleBackColor = false;
-            this.Mute_btn.Click += new System.EventHandler(this.mute_btn_Click);
-            // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -102,62 +87,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Xanadu Universe";
             // 
-            // bntMinimize
-            // 
-            this.bntMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bntMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.bntMinimize.FlatAppearance.BorderSize = 0;
-            this.bntMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntMinimize.Image = ((System.Drawing.Image)(resources.GetObject("bntMinimize.Image")));
-            this.bntMinimize.Location = new System.Drawing.Point(771, 12);
-            this.bntMinimize.Name = "bntMinimize";
-            this.bntMinimize.Size = new System.Drawing.Size(30, 24);
-            this.bntMinimize.TabIndex = 2;
-            this.bntMinimize.UseVisualStyleBackColor = false;
-            this.bntMinimize.Click += new System.EventHandler(this.bntMinimize_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Image = global::XanaduUniverseApp.Properties.Resources.maximize_btn;
-            this.btnMaximize.Location = new System.Drawing.Point(805, 12);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(28, 24);
-            this.btnMaximize.TabIndex = 1;
-            this.btnMaximize.UseVisualStyleBackColor = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::XanaduUniverseApp.Properties.Resources.close_btn;
-            this.btnClose.Location = new System.Drawing.Point(830, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 26);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btncloseform
-            // 
-            this.btncloseform.FlatAppearance.BorderSize = 0;
-            this.btncloseform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncloseform.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncloseform.Image = global::XanaduUniverseApp.Properties.Resources.return_btn;
-            this.btncloseform.Location = new System.Drawing.Point(219, 23);
-            this.btncloseform.Name = "btncloseform";
-            this.btncloseform.Size = new System.Drawing.Size(43, 34);
-            this.btncloseform.TabIndex = 0;
-            this.btncloseform.UseVisualStyleBackColor = true;
-            this.btncloseform.Click += new System.EventHandler(this.btncloseform_Click);
-            // 
             // labelTitle
             // 
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -170,15 +99,6 @@
             this.labelTitle.Size = new System.Drawing.Size(78, 28);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "HOME";
-            // 
-            // panelDesktopPanel
-            // 
-            this.panelDesktopPanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPanel.Location = new System.Drawing.Point(0, 75);
-            this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(882, 443);
-            this.panelDesktopPanel.TabIndex = 2;
             // 
             // panelmenu
             // 
@@ -263,6 +183,88 @@
             this.btnDraenei.UseVisualStyleBackColor = true;
             this.btnDraenei.Click += new System.EventHandler(this.btnDraenei_Click);
             // 
+            // panelDesktopPanel
+            // 
+            this.panelDesktopPanel.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelDesktopPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktopPanel.BackgroundImage")));
+            this.panelDesktopPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktopPanel.Location = new System.Drawing.Point(0, 75);
+            this.panelDesktopPanel.Name = "panelDesktopPanel";
+            this.panelDesktopPanel.Size = new System.Drawing.Size(882, 443);
+            this.panelDesktopPanel.TabIndex = 2;
+            // 
+            // Mute_btn
+            // 
+            this.Mute_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Mute_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.Mute_btn.FlatAppearance.BorderSize = 0;
+            this.Mute_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mute_btn.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mute_btn.Image = global::XanaduUniverseApp.Properties.Resources.mute_gif;
+            this.Mute_btn.Location = new System.Drawing.Point(633, 22);
+            this.Mute_btn.Name = "Mute_btn";
+            this.Mute_btn.Size = new System.Drawing.Size(56, 33);
+            this.Mute_btn.TabIndex = 3;
+            this.Mute_btn.UseVisualStyleBackColor = false;
+            this.Mute_btn.Click += new System.EventHandler(this.mute_btn_Click);
+            // 
+            // bntMinimize
+            // 
+            this.bntMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.bntMinimize.FlatAppearance.BorderSize = 0;
+            this.bntMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntMinimize.Image = ((System.Drawing.Image)(resources.GetObject("bntMinimize.Image")));
+            this.bntMinimize.Location = new System.Drawing.Point(771, 12);
+            this.bntMinimize.Name = "bntMinimize";
+            this.bntMinimize.Size = new System.Drawing.Size(30, 24);
+            this.bntMinimize.TabIndex = 2;
+            this.bntMinimize.UseVisualStyleBackColor = false;
+            this.bntMinimize.Click += new System.EventHandler(this.bntMinimize_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.Image = global::XanaduUniverseApp.Properties.Resources.maximize_btn;
+            this.btnMaximize.Location = new System.Drawing.Point(805, 12);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(28, 24);
+            this.btnMaximize.TabIndex = 1;
+            this.btnMaximize.UseVisualStyleBackColor = false;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::XanaduUniverseApp.Properties.Resources.close_btn;
+            this.btnClose.Location = new System.Drawing.Point(830, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(40, 26);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btncloseform
+            // 
+            this.btncloseform.FlatAppearance.BorderSize = 0;
+            this.btncloseform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncloseform.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncloseform.Image = global::XanaduUniverseApp.Properties.Resources.return_btn;
+            this.btncloseform.Location = new System.Drawing.Point(219, 23);
+            this.btncloseform.Name = "btncloseform";
+            this.btncloseform.Size = new System.Drawing.Size(43, 34);
+            this.btncloseform.TabIndex = 0;
+            this.btncloseform.UseVisualStyleBackColor = true;
+            this.btncloseform.Click += new System.EventHandler(this.btncloseform_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,6 +274,7 @@
             this.Controls.Add(this.panelmenu);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "FormMainMenu";
             this.Text = "Form1";
